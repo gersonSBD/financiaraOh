@@ -1,0 +1,61 @@
+<p-card>
+  <ng-template pTemplate="header">
+    <p class="pl-3 pt-3">Formulario de registro</p>
+  </ng-template>
+  <form [formGroup]="userForm" *ngIf="userForm">
+    <div class="field p-fluid">
+      <label for="name" class="block">Nombre</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        aria-describedby="name-help"
+        pInputText
+        [class.ng-dirty]="validateField('name')"
+      />
+      <div *ngIf="validateField('name')">
+        <small id="name-help" class="p-error block">Nombre invalido.</small>
+      </div>
+    </div>
+    <div class="field p-fluid">
+      <label for="surname" class="block">Apellido</label>
+      <input
+        id="surname"
+        type="text"
+        formControlName="surname"
+        aria-describedby="surname-help"
+        pInputText
+        [class.ng-dirty]="validateField('surname')"
+      />
+      <div *ngIf="validateField('surname')">
+        <small id="surname-help" class="p-error block">Apellido invalido.</small>
+      </div>
+    </div>
+    <div class="field p-fluid">
+      <label for="age" class="block">Edad</label>
+      <p-inputNumber 
+        inputId="age"
+        formControlName="age"
+        [class.ng-dirty]="validateField('age')">
+      </p-inputNumber>
+      <div *ngIf="validateField('age')">
+        <small id="age-help" class="p-error block">Edad invalida.</small>
+      </div>
+    </div>
+    <div class="field p-fluid">
+      <label for="birthday" class="block">Fecha de nacimiento.</label>
+      <p-calendar
+        [showIcon]="true" 
+        inputId="birthday"
+        formControlName="birthday"
+        [class.ng-dirty]="validateField('birthday')">>
+      </p-calendar>
+      <div *ngIf="validateField('birthday')">
+        <small id="surname-help" class="p-error block">Fecha de nacimiento invalida.</small>
+      </div>
+    </div>
+  </form>
+  <ng-template pTemplate="footer">
+    <p-button label="Guardar" (click)="save()"></p-button>
+  </ng-template>
+</p-card>

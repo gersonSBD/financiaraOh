@@ -1,0 +1,33 @@
+<p-panel>
+    <ng-template pTemplate="header">
+        Usuarios
+        <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
+        <displayModal [displayModal]="displayUserModal" (hideModal)="hideModalDialog($event)"></displayModal>
+    </ng-template>
+    
+    <div class="grid">
+        <div class="col-4">
+            <app-user-form></app-user-form>
+        </div>
+        <div class="col-8">
+            <p-table [value]="users">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Fecha de nacimiento</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-user>
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.surname }}</td>
+                        <td>{{ user.age }}</td>
+                        <td>{{ user.birthday | date }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</p-panel>

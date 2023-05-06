@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John 1",
+      "surname": "Doe",
+      "age": 26,
+      "birthday": "06-01-1997"
+    },
+    {
+      "id": 2,
+      "name": "John 2",
+      "surname": "Doe",
+      "age": 26,
+      "birthday": "06-01-1997"
+    },
+    {
+      "name": "Gerson Jose",
+      "surname": "Barrera Rangel",
+      "age": 50,
+      "birthday": "2023-05-24T05:00:00.000Z",
+      "id": 3
+    },
+    {
+      "name": "Gerson Jose",
+      "surname": "Barrera Rangel",
+      "age": 50,
+      "birthday": "1972-08-05T05:00:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "Gerson Stick",
+      "surname": "Barrera Delgado",
+      "age": 26,
+      "birthday": "1997-01-06T05:00:00.000Z",
+      "id": 5
+    },
+    {
+      "name": "Gerson Stick",
+      "surname": "Barrera Delgado",
+      "age": 26,
+      "birthday": "2023-05-02T05:00:00.000Z",
+      "id": 6
+    }
+  ]
+}
