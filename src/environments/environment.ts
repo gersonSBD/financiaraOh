@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiEndPoint: 'http://localhost:5000/',
+  apiEndPoint: 'https://financiera-api.web.app/api/',
+  //apiEndPoint: 'http://localhost:5000/api/',
 };
 
 /*

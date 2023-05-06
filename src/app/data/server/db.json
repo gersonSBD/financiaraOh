@@ -41,6 +41,20 @@
       "age": 26,
       "birthday": "2023-05-02T05:00:00.000Z",
       "id": 6
+    },
+    {
+      "name": "Admin2",
+      "surname": "Barrera Delgado",
+      "age": 90,
+      "birthday": "2023-05-09T05:00:00.000Z",
+      "id": 7
+    },
+    {
+      "name": "gersonstick",
+      "surname": "Barrera Delgado",
+      "age": 23,
+      "birthday": "2000-02-02T05:00:00.000Z",
+      "id": 8
     }
   ]
 }

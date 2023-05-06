@@ -21,6 +21,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((users: IUser[]) => {
+      console.log('users', users);
       this.sharedUsersService.sharedUsersData = users;
     });
   }
