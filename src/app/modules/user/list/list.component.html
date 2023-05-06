@@ -6,17 +6,18 @@
     </ng-template>
     
     <div class="grid">
-        <div class="col-4">
+        <div class="col-12 md:col-4">
             <app-user-form></app-user-form>
         </div>
-        <div class="col-8">
-            <p-table [value]="users">
+        <div class="col-12 md:col-8">
+            <p-table [value]="users" styleClass="p-datatable-striped" [paginator]="true" [rows]="3"
+            [showCurrentPageReport]="true" currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros">
                 <ng-template pTemplate="header">
                     <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Edad</th>
-                        <th>Fecha de nacimiento</th>
+                        <th pSortableColumn="name">Nombre <p-sortIcon field="name"></p-sortIcon></th>
+                        <th pSortableColumn="surname">Apellido <p-sortIcon field="surname"></p-sortIcon></th>
+                        <th pSortableColumn="age">Edad <p-sortIcon field="age"></p-sortIcon></th>
+                        <th pSortableColumn="birthday">Fecha de nacimiento <p-sortIcon field="birthday"></p-sortIcon></th>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-user>
